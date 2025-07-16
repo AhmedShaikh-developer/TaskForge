@@ -19,12 +19,6 @@
 - [Getting Started](#getting-started)  
   - [Prerequisites](#prerequisites)  
   - [Installation](#installation)  
-  - [Environment Variables](#environment-variables)  
-  - [Running Locally](#running-locally)  
-- [Docker Setup](#docker-setup)  
-- [API Usage](#api-usage)  
-- [Testing](#testing)  
-- [Contributing](#contributing)  
 - [License](#license)  
 
 ---
