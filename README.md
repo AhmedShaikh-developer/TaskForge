@@ -99,4 +99,39 @@
    git clone https://github.com/your-username/tasktemplate-service.git
    cd tasktemplate-service
 
+## Configuration
 
+1. Copy the example environment file and edit secrets:
+   ```bash
+   cp .env.example .env
+
+2. Open .env and set the following variables:
+   ```bash
+   SECRET_KEY=your-very-secret-key
+   REDIS_HOST=localhost
+   REDIS_PORT=6379
+
+3. Usage:
+   Running Locally
+   Start the FastAPI server with auto‑reload:
+   ```bash
+   uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+
+## Docker & Docker Compose
+
+1. Using Docker Compose- Build and start both app and Redis:
+    ```bash
+    docker-compose up --build
+FastAPI app available at: http://localhost:8000
+Redis listening on: localhost:6379
+
+2. Standalone Docker- Build the Docker image:
+    ```bash
+    docker build -t taskforge-api .
+Run the container:
+ ```bashdocker run -d \
+  -p 8000:8000 \
+  --env-file .env \
+  --name taskforge-api \
+  taskforge-api
